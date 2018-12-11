@@ -1,18 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    browser: true
   },
-  'extends': [
-    'plugin:vue/essential',
-    '@vue/standard',
-    '@vue/typescript'
-  ],
+  extends: ["plugin:vue/essential", "@vue/standard"],
+  plugins: ["vue"],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "space-infix-ops": 0
   },
   parserOptions: {
-    parser: 'typescript-eslint-parser'
+    parser: "babel-eslint"
   }
-}
+};
